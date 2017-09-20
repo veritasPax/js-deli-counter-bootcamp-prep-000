@@ -17,9 +17,11 @@ function nowServing(currentLine) {
 function currentLine(currentLine){
   var lineString = 'The line is currently: '
   for (var i = i; i < currentLine.length; i++) {
+    if (i === currentLine.length - 1) {
+      lineString += `${i+1}. ${currentLine[i]}`
+    }
     lineString += `${i+1}. ${currentLine[i]}, `
   }
 
   return lineString
 }
-
